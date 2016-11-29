@@ -18,8 +18,12 @@ or compatible USB-TTL converter
 Schematics
 ----------
 
-![Sample schematics](sample_schematics.png)
+![Schematics for Intel Edison](edison_schematics.png)
+![Schematics for Raspberry Pi 3](rpi3_schematics.png)
 
+Check in the USB TTL cable's documentation for the TX and RX wire colors:
+- connect the cable TX wire to the board RX pin
+- connect the cable RX wire to the board TX pin
 
 Build and install
 =================
