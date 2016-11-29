@@ -14,16 +14,17 @@
  * limitations under the License.
  */
 
-package com.google.samples.loopback;
+package com.example.androidthings.loopback;
 
 import android.app.Activity;
-import android.hardware.pio.PeripheralManagerService;
-import android.hardware.pio.UartDevice;
-import android.hardware.pio.UartDeviceCallback;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.util.Log;
+
+import com.google.androidthings.pio.PeripheralManagerService;
+import com.google.androidthings.pio.UartDevice;
+import com.google.androidthings.pio.UartDeviceCallback;
 
 import java.io.IOException;
 
@@ -35,8 +36,6 @@ import java.io.IOException;
 public class LoopbackActivity extends Activity {
     private static final String TAG = "LoopbackActivity";
 
-    // Edison UART Device
-    private static final String UART_DEVICE_NAME = BoardDefaults.getUartName();
     // UART Configuration Parameters
     private static final int BAUD_RATE = 115200;
     private static final int DATA_BITS = 8;
@@ -51,6 +50,13 @@ public class LoopbackActivity extends Activity {
 
     private UartDevice mLoopbackDevice;
 
+    private Runnable mTransferUartRunnable = new Runnable() {
+        @Override
+        public void run() {
+            transferUartData();
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,9 +69,9 @@ public class LoopbackActivity extends Activity {
 
         // Attempt to access the UART device
         try {
-            openUart(UART_DEVICE_NAME, BAUD_RATE);
+            openUart(BoardDefaults.getUartName(), BAUD_RATE);
             // Read any initially buffered data
-            mInputHandler.post(this::transferUartData);
+            mInputHandler.post(mTransferUartRunnable);
         } catch (IOException e) {
             Log.e(TAG, "Unable to open UART device", e);
         }

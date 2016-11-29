@@ -9,11 +9,8 @@ any data read from the receive (RX) buffer to the transmit (TX) buffer.
 Pre-requisites
 --------------
 
-- Intel Edison (this sample is not compatible with Raspberry PI 3)
-- Android Things SDK, currently offered through a private Maven repo. See
-  instructions at [go/brillo-gradle-setup]
+- Android Things compatible board with an available UART port
 - Android Studio 2.2+
-- Java 8
 - [FTDI TTL-232R](http://www.ftdichip.com/Products/Cables/USBTTLSerial.htm)
 or compatible USB-TTL converter
 

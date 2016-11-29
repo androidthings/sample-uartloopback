@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.samples.loopback;
+package com.example.androidthings.loopback;
 
 import android.os.Build;
 @SuppressWarnings("WeakerAccess")
@@ -26,7 +26,7 @@ public class BoardDefaults {
      * Return the UART for loopback.
      */
     public static String getUartName() {
-        // TODO: confirm DEVICE and preferred port for NXP
+        // TODO: confirm preferred port for NXP
         switch (Build.DEVICE) {
             case DEVICE_EDISON:
                 return "UART1";
