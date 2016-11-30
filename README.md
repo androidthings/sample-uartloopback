@@ -30,7 +30,7 @@ If you prefer to run on the command line, type
 
 ```bash
 ./gradlew installDebug
-adb shell am start com.google.samples.temperature/.TemperatureActivity
+adb shell am start com.example.androidthings.loopback/.LoopbackActivity
 ```
 
 2. Plug the USB-TTL converter into a host PC, start your favorite terminal
