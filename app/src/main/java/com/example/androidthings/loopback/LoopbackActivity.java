@@ -22,9 +22,9 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.util.Log;
 
-import com.google.androidthings.pio.PeripheralManagerService;
-import com.google.androidthings.pio.UartDevice;
-import com.google.androidthings.pio.UartDeviceCallback;
+import com.google.android.things.pio.PeripheralManagerService;
+import com.google.android.things.pio.UartDevice;
+import com.google.android.things.pio.UartDeviceCallback;
 
 import java.io.IOException;
 
