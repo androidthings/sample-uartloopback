@@ -22,7 +22,7 @@
         android:allowBackup="true"
         android:label="@string/app_name">
 
-        <uses-library android:name="com.google.androidthings"/>
+        <uses-library android:name="com.google.android.things"/>
 
         <activity android:name=".LoopbackActivity">
             <intent-filter>
