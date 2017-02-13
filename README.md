@@ -5,7 +5,6 @@ This sample demonstrates basic data read and write operations over a UART.
 The application creates a loopback interface that immediately echoes
 any data read from the receive (RX) buffer to the transmit (TX) buffer.
 
-
 Pre-requisites
 --------------
 
@@ -20,6 +19,10 @@ Schematics
 
 ![Schematics for Intel Edison](edison_schematics.png)
 ![Schematics for Raspberry Pi 3](rpi3_schematics.png)
+
+NOTE: on Raspberry Pi 3 you need to disable the serial debugging console using
+the following [instructions][pi3-instructions] in order for the driver to be
+able to access the UART port.
 
 Check in the USB TTL cable's documentation for the TX and RX wire colors:
 - connect the cable TX wire to the board RX pin
@@ -63,3 +66,5 @@ distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
 License for the specific language governing permissions and limitations under
 the License.
+
+[pi3-instructions]: https://developer.android.com/things/hardware/raspberrypi.html#disabling_the_console
