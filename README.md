@@ -20,9 +20,9 @@ Schematics
 ![Schematics for Intel Edison](edison_schematics.png)
 ![Schematics for Raspberry Pi 3](rpi3_schematics.png)
 
-NOTE: on Raspberry Pi 3 you need to disable the serial debugging console using
-the following [instructions][pi3-instructions] in order for the driver to be
-able to access the UART port.
+NOTE: on Raspberry Pi 3 you need to expose UART0 on the BCM14/BCM15 GPIO pins
+by changing the boot configuration files to _Application Mode_, according to
+these [instructions][pi3-instructions].
 
 Check in the USB TTL cable's documentation for the TX and RX wire colors:
 - connect the cable TX wire to the board RX pin
@@ -67,4 +67,4 @@ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
 License for the specific language governing permissions and limitations under
 the License.
 
-[pi3-instructions]: https://developer.android.com/things/hardware/raspberrypi.html#disabling_the_console
+[pi3-instructions]: https://developer.android.com/things/hardware/raspberrypi.html#configuring_the_uart_mode
