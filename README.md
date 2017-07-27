@@ -1,24 +1,20 @@
-UART Loopback sample for Android Things
-=======================================
+# UART Loopback sample for Android Things
 
 This sample demonstrates basic data read and write operations over a UART.
 The application creates a loopback interface that immediately echoes
 any data read from the receive (RX) buffer to the transmit (TX) buffer.
 
-Pre-requisites
---------------
+## Pre-requisites
 
 - Android Things compatible board with an available UART port
 - Android Studio 2.2+
 - [FTDI TTL-232R](http://www.ftdichip.com/Products/Cables/USBTTLSerial.htm)
 or compatible USB-TTL converter
 
+## Schematics
 
-Schematics
-----------
-
-![Schematics for Intel Edison](edison_schematics.png)
 ![Schematics for Raspberry Pi 3](rpi3_schematics.png)
+![Schematics for Intel Edison](edison_schematics.png)
 
 NOTE: on Raspberry Pi 3 you need to expose UART0 on the BCM14/BCM15 GPIO pins
 by changing the boot configuration files to _Application Mode_, according to
@@ -28,8 +24,7 @@ Check in the USB TTL cable's documentation for the TX and RX wire colors:
 - connect the cable TX wire to the board RX pin
 - connect the cable RX wire to the board TX pin
 
-Build and install
-=================
+## Build and install
 
 1. On Android Studio, click on the "Run" button.
 
@@ -46,9 +41,7 @@ at 115200 baud.
 
 3. Type characters into the terminal and observe them echo back to you from the device.
 
-
-License
--------
+## License
 
 Copyright 2016 The Android Open Source Project, Inc.
 
