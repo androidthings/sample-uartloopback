@@ -4,6 +4,12 @@ This sample demonstrates basic data read and write operations over a UART.
 The application creates a loopback interface that immediately echoes
 any data read from the receive (RX) buffer to the transmit (TX) buffer.
 
+## Screenshots
+
+![UART Loopback sample demo][demo-gif]
+
+[(Watch the demo on YouTube)][demo-yt]
+
 ## Pre-requisites
 
 - Android Things compatible board with an available UART port
@@ -59,3 +65,5 @@ License for the specific language governing permissions and limitations under
 the License.
 
 [pi3-modes]: https://developer.android.com/things/hardware/raspberrypi-mode-matrix.html
+[demo-yt]: https://www.youtube.com/watch?v=OBprmZ00T3E&index=12&list=PLWz5rJ2EKKc-GjpNkFe9q3DhE2voJscDT
+[demo-gif]: demo1.gif
