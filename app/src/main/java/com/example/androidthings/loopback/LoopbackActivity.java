@@ -22,7 +22,7 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.util.Log;
 
-import com.google.android.things.pio.PeripheralManagerService;
+import com.google.android.things.pio.PeripheralManager;
 import com.google.android.things.pio.UartDevice;
 import com.google.android.things.pio.UartDeviceCallback;
 
@@ -42,8 +42,6 @@ public class LoopbackActivity extends Activity {
     private static final int STOP_BITS = 1;
 
     private static final int CHUNK_SIZE = 512;
-
-    private PeripheralManagerService mService = new PeripheralManagerService();
 
     private HandlerThread mInputThread;
     private Handler mInputHandler;
@@ -125,7 +123,7 @@ public class LoopbackActivity extends Activity {
      * @throws IOException if an error occurs opening the UART port.
      */
     private void openUart(String name, int baudRate) throws IOException {
-        mLoopbackDevice = mService.openUartDevice(name);
+        mLoopbackDevice = PeripheralManager.getInstance().openUartDevice(name);
         // Configure the UART
         mLoopbackDevice.setBaudrate(baudRate);
         mLoopbackDevice.setDataSize(DATA_BITS);
