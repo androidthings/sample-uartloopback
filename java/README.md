@@ -1,4 +1,4 @@
-# UART Loopback sample for Android Things
+# UART Loopback sample for Android Things (Java)
 
 This sample demonstrates basic data read and write operations over a UART.
 The application creates a loopback interface that immediately echoes
@@ -19,7 +19,7 @@ or compatible USB-TTL converter
 
 ## Schematics
 
-![Schematics for Raspberry Pi 3](rpi3_schematics.png)
+![Schematics for Raspberry Pi 3](../rpi3_schematics.png)
 
 NOTE: Raspberry Pi 3 shares the UART pins between multiple ports, including the serial debugging
 console. Refer to the [mode matrix][pi3-modes] for more details.
@@ -66,4 +66,4 @@ the License.
 
 [pi3-modes]: https://developer.android.com/things/hardware/raspberrypi-mode-matrix.html
 [demo-yt]: https://www.youtube.com/watch?v=OBprmZ00T3E&index=12&list=PLWz5rJ2EKKc-GjpNkFe9q3DhE2voJscDT
-[demo-gif]: demo1.gif
+[demo-gif]: ../demo1.gif
