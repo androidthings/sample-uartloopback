@@ -69,7 +69,7 @@ class LoopbackActivity : Activity() {
         // Attempt to access the UART device
         peripheralManager = PeripheralManager.getInstance()
         loopbackDevice = openUart(BoardDefaults.uartName, BoardDefaults.BAUD_RATE)
-        loopbackDevice.registerUartDeviceCallback(callback, inputHandler)
+        loopbackDevice.registerUartDeviceCallback(inputHandler, callback)
 
         // Read any initially buffered data
         inputHandler.post { transferUartData() }

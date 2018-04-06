@@ -130,7 +130,7 @@ public class LoopbackActivity extends Activity {
         mLoopbackDevice.setParity(UartDevice.PARITY_NONE);
         mLoopbackDevice.setStopBits(STOP_BITS);
 
-        mLoopbackDevice.registerUartDeviceCallback(mCallback, mInputHandler);
+        mLoopbackDevice.registerUartDeviceCallback(mInputHandler, mCallback);
     }
 
     /**
