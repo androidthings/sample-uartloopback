@@ -1,4 +1,4 @@
-# UART Loopback sample for Android Things (Kotlin)
+# UART Loopback (Kotlin)
 
 This sample demonstrates basic data read and write operations over a UART.
 The application creates a loopback interface that immediately echoes
