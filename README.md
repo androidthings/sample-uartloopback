@@ -4,6 +4,10 @@ This sample demonstrates basic data read and write operations over a UART.
 The application creates a loopback interface that immediately echoes
 any data read from the receive (RX) buffer to the transmit (TX) buffer.
 
+> **Note:** The Android Things Console will be turned down for non-commercial
+> use on January 5, 2022. For more details, see the
+> [FAQ page](https://developer.android.com/things/faq).
+
 ## Screenshots
 
 ![UART Loopback sample demo][demo-gif]
